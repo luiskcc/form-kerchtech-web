@@ -9,6 +9,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        'custom-size-1': '300px',
+        'custom-size-2': '400px',
+      },
+      heigh: {
+        'custom-size-1': '200px',
+        'custom-size-2': '300px',
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
