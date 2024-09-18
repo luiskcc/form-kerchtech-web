@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WebdevKerchtech</title>
+    <title>kerchtech</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,6 +16,35 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NVKGSZMZ');</script>
     <!-- End Google Tag Manager -->
+
+    <!-- Removed gtag.js script -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16696567056"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16696567056');
+    </script>
+    -->
+
+    <!-- Event snippet for Typeform (1) conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16696567056/KpFECMKZutMZEJDKxZk-',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
   </head>
 
   <body>
