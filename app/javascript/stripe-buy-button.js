@@ -1,6 +1,6 @@
   // Set the countdown duration in seconds
-const countdownDuration = 24 * 60 * 60;
-let timeRemaining = countdownDuration;
+const targetDate = new Date(2024, 09, 16, 17, 30, 00);
+let timeRemaining = Math.floor((targetDate - new Date()) / 1000);
 
 function updateCountdown() {
 const days = Math.floor(timeRemaining / (24 * 60 * 60));
@@ -22,3 +22,5 @@ if (timeRemaining > 0) {
 
 // Update the countdown every second
 const countdownInterval = setInterval(updateCountdown, 1000);
+
+updateCountdown();

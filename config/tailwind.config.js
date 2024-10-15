@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         'custom-color-1': '#202020',
+        'font-color': '1A1A1A',
       },
       padding: {
         'custom-padding-1': '200px',
