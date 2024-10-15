@@ -1,75 +1,45 @@
 
-<div class="flex flex-col items-center p-8 bg-[#202020] rounded-lg">
-  <div class="grid auto-cols-max grid-flow-col gap-5 text-center pb-5">
-    <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-      <span class="countdown font-mono text-4xl sm:text-3xl" id="days">
-        <span id="days-value"></span>
-      </span>
-      <p class="text-sm sm:text-xs">days</p>
-    </div>
-    <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-      <span class="countdown font-mono text-4xl sm:text-3xl" id="hours">
-        <span id="hours-value"></span>
-      </span>
-      <p class="text-sm sm:text-xs">hours</p>
-    </div>
-    <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-      <span class="countdown font-mono text-4xl sm:text-3xl" id="minutes">
-        <span id="minutes-value"></span>
-      </span>
-      <p class="text-sm sm:text-xs">min</p>
-    </div>  
-    <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
-      <span class="countdown font-mono text-4xl sm:text-3xl" id="seconds">
-        <span id="seconds-value"></span>
-      </span>
-      <p class="text-sm sm:text-xs">sec</p>
-    </div>
+<div class="pb-custom-padding-1">
+  <div class="flex flex-col items-center p-8 bg-[#202020] rounded-lg">
+    <div class="grid auto-cols-max grid-flow-col gap-5 text-center pb-5">
+      <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+        <span class="countdown font-mono text-4xl sm:text-3xl" id="days">
+          <span id="days-value"></span>
+        </span>
+        <p class="text-sm sm:text-xs">days</p>
+      </div>
+      <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+        <span class="countdown font-mono text-4xl sm:text-3xl" id="hours">
+          <span id="hours-value"></span>
+        </span>
+        <p class="text-sm sm:text-xs">hours</p>
+      </div>
+      <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+        <span class="countdown font-mono text-4xl sm:text-3xl" id="minutes">
+          <span id="minutes-value"></span>
+        </span>
+        <p class="text-sm sm:text-xs">min</p>
+      </div>  
+      <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+        <span class="countdown font-mono text-4xl sm:text-3xl" id="seconds">
+          <span id="seconds-value"></span>
+        </span>
+        <p class="text-sm sm:text-xs">sec</p>
+      </div>
 
+    </div>
+      <script async
+        src="https://js.stripe.com/v3/buy-button.js">
+      </script>
+
+      <stripe-buy-button
+        buy-button-id="buy_btn_1QA9jFFZ2qLWI2RywRb9vM99"
+        publishable-key="pk_test_51O5XwmFZ2qLWI2Ry1y7LZ5qilVEIgHIDtGsAhtrwIpiQ4umVqTrsg1jYMlbHwNrvJ0XF4Vb3DCpCJYnx0YT99LWb00NxqTAs7J"
+      >
+      </stripe-buy-button>
   </div>
-    <script async
-      src="https://js.stripe.com/v3/buy-button.js">
-    </script>
-
-    <stripe-buy-button
-      buy-button-id="buy_btn_1QA9jFFZ2qLWI2RywRb9vM99"
-      publishable-key="pk_test_51O5XwmFZ2qLWI2Ry1y7LZ5qilVEIgHIDtGsAhtrwIpiQ4umVqTrsg1jYMlbHwNrvJ0XF4Vb3DCpCJYnx0YT99LWb00NxqTAs7J"
-    >
-    </stripe-buy-button>
 </div>
 
 
 
-
-
-
-
-
-
-
-<script>
-  // Set the countdown duration in seconds
-  const countdownDuration = 24 * 60 * 60;
-  let timeRemaining = countdownDuration;
-
-  function updateCountdown() {
-    const days = Math.floor(timeRemaining / (24 * 60 * 60));
-    const hours = Math.floor((timeRemaining % (24 * 60 * 60)) / (60 * 60));
-    const minutes = Math.floor((timeRemaining % (60 * 60)) / 60);
-    const seconds = timeRemaining % 60;
-
-    document.getElementById('days-value').textContent = days;
-    document.getElementById('hours-value').textContent = hours;
-    document.getElementById('minutes-value').textContent = minutes;
-    document.getElementById('seconds-value').textContent = seconds;
-
-    if (timeRemaining > 0) {
-      timeRemaining--;
-    } else {
-      clearInterval(countdownInterval);
-    }
-  }
-
-  // Update the countdown every second
-  const countdownInterval = setInterval(updateCountdown, 1000);
-</script>
+<%= javascript_include_tag 'stripe-buy-button'%>

@@ -12,6 +12,9 @@ module.exports = {
       colors: {
         'custom-color-1': '#202020',
       },
+      padding: {
+        'custom-padding-1': '200px',
+      },
       width: {
         'custom-size-1': '300px',
         'custom-size-2': '400px',
