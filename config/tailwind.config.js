@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'custom-color-1': '#202020',
+      },
       width: {
         'custom-size-1': '300px',
         'custom-size-2': '400px',

@@ -48,12 +48,9 @@
   </head>
 
   <body>
-      <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVKGSZMZ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto mt-28 px-5 flex justify-center">
       <%= yield %>
     </main>
+    <%= render "layouts/footer"%>
   </body>
 </html>
